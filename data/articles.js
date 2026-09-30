@@ -1,0 +1,48 @@
+
+export const articles = [
+  {
+    id: 1,
+    title: "Understanding React",
+    category: "Frontend",
+    author: "Anita",
+    description: "An introduction to React fundamentals.",
+    likes: 12,
+    isFavourite: false,
+  },
+  {
+    id: 2,
+    title: "Getting Started with Redux",
+    category: "Frontend",
+    author: "Rahul",
+    description: "Core Redux concepts explained with a simple counter example.",
+    likes: 8,
+    isFavourite: true,
+  },
+  {
+    id: 3,
+    title: "Node.js for Frontend Developers",
+    category: "Backend",
+    author: "Meera",
+    description: "Why frontend developers need to understand Node and npm.",
+    likes: 15,
+    isFavourite: false,
+  },
+  {
+    id: 4,
+    title: "CI/CD Pipelines Explained",
+    category: "DevOps",
+    author: "Arjun",
+    description: "A beginner-friendly walkthrough of continuous integration.",
+    likes: 5,
+    isFavourite: false,
+  },
+  {
+    id: 5,
+    title: "Writing Your First Unit Test",
+    category: "Testing",
+    author: "Anita",
+    description: "Getting comfortable with Jest before we need it on Day 9.",
+    likes: 9,
+    isFavourite: true,
+  },
+];

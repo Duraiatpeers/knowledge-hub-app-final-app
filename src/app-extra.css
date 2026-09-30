@@ -1,0 +1,243 @@
+/* Styles for Login, Header/nav, Dashboard and the shared status states.
+   Import this after index.css (e.g. add "import './app-extra.css'" in
+   main.jsx, right below "import './index.css'") — it reuses the same
+   --text / --bg / --border / --accent variables already defined there,
+   so it matches the rest of the app instead of introducing new colors. */
+
+/* ---- Header / nav bar --------------------------------------------- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.app-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  font: inherit;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  border-color: var(--border);
+}
+
+.nav-btn.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+  border-color: var(--accent-border, var(--accent));
+}
+
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.logout-btn {
+  font: inherit;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---- Login page ------------------------------------------------------ */
+.login-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.login-form h1 {
+  margin: 0 0 4px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.login-subtitle {
+  text-align: center;
+  margin-bottom: 20px !important;
+}
+
+.login-form label {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.login-form input {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.login-form input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.login-form button[type='submit'] {
+  font: inherit;
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-form button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.login-hint {
+  margin-top: 16px !important;
+  font-size: 13px;
+  text-align: center;
+  color: var(--text);
+}
+
+/* ---- Dashboard --------------------------------------------------------- */
+.dashboard {
+  padding: 24px;
+  text-align: left;
+}
+
+.dashboard-subtitle {
+  margin-bottom: 24px !important;
+}
+
+.stat-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1 1 160px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* ---- Shared status states (loading / error / empty) -------------------- */
+.status-message {
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text);
+}
+
+.status-error {
+  color: #dc2626;
+}
+
+.empty-state {
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text);
+}
+
+.retry-btn {
+  font: inherit;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.retry-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---- Favourite badge on ArticleCard ------------------------------------- */
+.badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+/* ---- View / Like / Favourite buttons on ArticleCard ---------------------
+   .btn-row has been in ArticleCard's markup since Day 3, but nothing has
+   ever styled it, so the three buttons were rendering flush against each
+   other with only the browser's default inline spacing. */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-row button {
+  font: inherit;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.btn-row button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
